@@ -26,3 +26,16 @@ formato: (7.5, 0.5)
 La salida impresa del método mostrar() debe ser: 
 Punto. X: 7.5, Y: 0.5
 (los valores en negrita dependen del estado del objeto)
+
+Punto
+-x: double
+-y: double
++Punto()
++Punto(p_x: double, p_y: double)
+-setX(p_x: double)
+-setY(p_y: double)
++getX(): double
++getY(): double
++desplazar(p_dx: double, p_dy: double): void
++mostrar()
++coordenad	as(): String
