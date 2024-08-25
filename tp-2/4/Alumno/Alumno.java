@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Alumno here.
- * 
- * @author (Sotelo Matias) 
- * @version (23/08/2024)
+ *	La clase Alumno permite gestionar la información academica 
+ * 	del alumno.
+ *
+ *	@author (Sotelo Matias) 
+ *	@version (23/08/2024)
  */
 public class Alumno
 {
@@ -143,7 +144,7 @@ public class Alumno
     *
     *	@return nombre y apellido 
     */
-    public String nomYApe(String nombre, String Apellido)
+    public String nomYApe()
     {
         return  this.getNombre() + " " + this.getApellido();
     }
@@ -153,7 +154,7 @@ public class Alumno
     *	
     *	@return apellido y nombre 
     */
-    public String apeYNom(String nombre, String Apellido)
+    public String apeYNom()
     {
         return  this.getApellido() + " " + this.getNombre();
     }
@@ -164,7 +165,7 @@ public class Alumno
     */
     public void mostrar()
     {
-        System.out.println("Nombre y Apellido: " + this.nomYApe(nombre, apellido) + "\n" +
+        System.out.println("Nombre y Apellido: " + this.nomYApe() + "\n" +
         "LU: " + this.getLu() + "Notas: " + this.getNota1() + "-" + this.getNota2() + "\n" + 
         "PROMEDIO: " + this.promedio(nota1, nota2) + "-" + this.leyendaAprueba());    
     }
