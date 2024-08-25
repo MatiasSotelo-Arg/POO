@@ -1,9 +1,12 @@
 /**
- * Write a description of class Cliente here.
+ *	La Clase Cliente permite llevar el seguimiento del
+ *	saldo de un cliente con la posibilidad de agregar un
+ *	saldo nuevo al ya existente.
  * 
- * @author (Sotelo Matias) 
- * @version (22/08/2024)
+ *	@author (Sotelo Matias) 
+ *	@version (22/08/2024)
  */
+
 public class Cliente
 {
     //Atributos
