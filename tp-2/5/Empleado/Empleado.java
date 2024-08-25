@@ -1,10 +1,9 @@
-
 /**
  * La clase Empleado permite a la empresa, 
  * la liquidación de sueldo de sus empleados.
  * 
  * @author (Sotelo Matias) 
- * @version (22/08/2024)
+ * @version (25/08/2024)
  */
 
 import java.util.*;
@@ -37,51 +36,61 @@ public class Empleado
     }
 
     //Metodos
+    /* @param p_cuil del empleado */
     private void setCuil(long p_cuil) 
     {
         this.cuil = p_cuil;
     }
     
+     /* @param p_apellido del empleado */
     private void setApellido(String p_apellido) 
     {
         this.apellido = p_apellido;
     }
     
+     /* @param p_nombre del empleado */
     private void setNombre(String p_nombre) 
     {
         this.nombre = p_nombre;
     }
-    
+   
+     /* @param p_sueldoBasico del empleado */
     private void setSueldoBasico(double p_sueldoBasico) 
     {
         this.sueldoBasico = p_sueldoBasico;
     }
     
+     /* @param p_anioIngreso del empleado */
     private void setAnioIngreso(int p_anioIngreso) 
     {
         this.anioIngreso = p_anioIngreso;
     }
     
+    /* @return cuil del empleado */
     public long getCuil()
     {
         return this.cuil;
     }
     
+    /* @return nombre del empleado */
     public String getNombre()
     {
         return this.nombre;
     }
     
+    /* @return apellido del empleado */
     public String getApellido()
     {
         return this.apellido;
     }
 
+    /* @return sueldoBasico del empleado */
     public double getSueldoBasico()
     {
         return this.sueldoBasico;
     }
     
+    /* @return año Ingreso del empleado */
     public int getAnioIngreso()
     {
         return this.anioIngreso;
@@ -208,7 +217,7 @@ public class Empleado
     */   
     public String mostrarLinea() 
     {
-        return this.getCuil() + " " + this.apeYNom() + " …………… $" 
-        + this.sueldoNeto();
+        return this.getCuil() + " " + this.apeYNom() 
+        + " …………… $" + this.sueldoNeto();
     }
 }
