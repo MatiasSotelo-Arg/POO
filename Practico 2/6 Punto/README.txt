@@ -1,3 +1,23 @@
++---------------------------------+
+|             Punto               |
++---------------------------------+
+| - x: double                     |
+| - y: double                     |
++---------------------------------+
+| + Punto()                       |
+| + Punto(p_x: double,            |
+|         p_y: double)            | 
+| + setX(p_x: double): void       |
+| + setY(p_y: double): void       |
+| + getX(): double                |
+| + getY(): double                |
+| + desplazar(p_dx: double,       |
+|             p_dy: double): void |
+| + mostrar(): void               |
+| + coordenadas(): String         |
++---------------------------------+
+
+
 6. Con el propósito de trabajar con figuras geométricas, 
 se modela como colaborador, el concepto “punto”, 
 que participará más adelante en la construcción de 
@@ -27,15 +47,3 @@ La salida impresa del método mostrar() debe ser:
 Punto. X: 7.5, Y: 0.5
 (los valores en negrita dependen del estado del objeto)
 
-Punto
--x: double
--y: double
-+Punto()
-+Punto(p_x: double, p_y: double)
--setX(p_x: double)
--setY(p_y: double)
-+getX(): double
-+getY(): double
-+desplazar(p_dx: double, p_dy: double): void
-+mostrar()
-+coordenad	as(): String

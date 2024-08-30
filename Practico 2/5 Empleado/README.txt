@@ -1,3 +1,28 @@
++--------------------------------+
+|           Empleado             |
++--------------------------------+
+| - cuil: long                   |
+| - apellido: String             |
+| - nombre: String               |
+| - sueldoBasico: double         |
+| - anioIngreso: int             |
++--------------------------------+
+| + Empleado(p_cuil: long,       |
+|            p_apellido: String, |
+|            p_nombre: String,   |
+|            p_importe: double,  |
+|            p_anio: int)        |
+| + antiguedad(): int            |
+| + descuento(): double          |
+| + adicional(): double          |
+| + sueldoNeto(): double         |
+| + nomYApe(): String            |
+| + apeYNom(): String            |
+| + mostrar(): void              |
+| + mostrarLinea(): String       |
++--------------------------------+
+
+
 Una empresa desea administrar automáticamente la liquidación de sueldo de sus empleados. 
 
 Para ello se modela la abstracción del concepto “empleado”, teniendo en cuenta 
@@ -29,18 +54,4 @@ Sueldo Neto: $ 300000.00
 El método mostrarLinea() retorna una cadena como la siguiente (los valores dependen del estado interno del objeto):
 20351234385 Perez, Juan …………… $ 300000.00
 
-Empleado
--cuil: long
--apellido: String
--nombre: String
--sueldoBasico: double
--anioIngreso: int
-+Empleado(p_cuil: long, p_apellido: String, p_nombre: String, p_importe: double, p_anio: int)
-+antiguedad(): int
--descuento(): double
--adicional(): double
-+sueldoNeto(): double
-+nomYApe(): String
-+apeYNom(): String
-+mostrar(): void
-+mostrarLinea(): String
+
