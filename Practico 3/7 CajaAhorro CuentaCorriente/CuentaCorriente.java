@@ -89,7 +89,7 @@ public class CuentaCorriente
     /** @return titular persona titular de la cuenta. */
     public Persona getTitular() 
     {
-        return titular;
+        return this.titular;
     }
     
     //Metodos
