@@ -91,7 +91,7 @@ public class Empleado
     {
         Calendar fecha = Calendar.getInstance();
         fecha.set(p_anio,1,1);
-        setFechaIngreso(fecha);
+        this.setFechaIngreso(fecha);
     }
     
     //Getters
