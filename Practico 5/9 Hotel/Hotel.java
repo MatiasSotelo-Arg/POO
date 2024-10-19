@@ -60,15 +60,16 @@ public class Hotel extends Alojamiento
         int total = 0;
         if(p_alojamiento.equals("Hotel")) 
         {
-            return total++;
+            return total + 1;
         } else {
             return total;
         }
     }
 
     public void liquidar() {
+        super.liquidar();
         System.out.println("Habitacion " + this.getTipoHabitacion());
-        System.out.println("Total: ------> $" + this.costo());
+        System.out.println("Total: ------> $" + this.costo() + "\n");
     }
 
 }

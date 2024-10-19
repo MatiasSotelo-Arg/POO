@@ -40,16 +40,18 @@ public class Cabaña extends Alojamiento
 
         double costoBase = super.costo();
 
+        double costoServicios = super.costoServicios();
+
         double costoExtra = this.getNroHabitaciones() * montoExtra; 
 
-        return costoBase + costoExtra;
+        return costoBase + costoExtra + costoServicios;
     }
 
     public int contar(String p_alojamiento) {
         int total = 0;
         if(p_alojamiento.equals("Cabaña")) 
         {
-            return total++;
+            return total + 1;
         } else {
             return total;
         }
@@ -57,7 +59,8 @@ public class Cabaña extends Alojamiento
 
 
     public void liquidar() {
+        super.liquidar();
         System.out.println("Cabaña con "+ this.getNroHabitaciones() +" habitaciones");
-        System.out.println("Total: ------> $" + this.costo() );
+        System.out.println("Total: ------> $" + this.costo() + "\n");
     }
 }

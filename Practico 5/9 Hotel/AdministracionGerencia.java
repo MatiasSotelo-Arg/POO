@@ -7,27 +7,29 @@
  */
 public class AdministracionGerencia
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class AdministracionGerencia
-     */
-    public AdministracionGerencia()
+    public static void main() 
     {
-        // initialise instance variables
-        x = 0;
-    }
+        Gerencia gerencia = new Gerencia("los arrollos");
+                
+        Servicio auto = new Servicio("alquiler auto", 100);
+        Servicio lavanderia = new Servicio("lavanderia", 20);
+        Servicio internet = new Servicio("internet", 5);
+        
+        Alojamiento cabaña = new Cabaña("Cabaña", 210, 5, 3); 
+        Alojamiento hotel = new Hotel("Hotel", 90, 5,"Single"); 
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        cabaña.agregarServicio(auto);
+        cabaña.agregarServicio(lavanderia);
+        
+        hotel.agregarServicio(auto);
+        hotel.agregarServicio(internet);
+        
+        gerencia.agregarAlojamiento(cabaña);
+        gerencia.agregarAlojamiento(hotel);
+        
+        gerencia.mostrarLiquidacion();
+        
+        System.out.println("Alojamiento tipo Cabaña ----> " + gerencia.contarAlojamiento("Cabaña"));    
+        System.out.println("Alojamiento tipo Hotel ----> " + gerencia.contarAlojamiento("Hotel"));    
     }
 }

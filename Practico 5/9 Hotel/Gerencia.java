@@ -101,9 +101,6 @@ public class Gerencia
     {
         System.out.println("Gerencia " + this.getNombre() );
         System.out.println("Liquidación-------------------");
-
-
-        System.out.println("Alojamiento tipo Cabaña ----> " + this.contarAlojamiento("Cabaña"));
-        System.out.println("Alojamiento tipo Hotel -------> " + this.contarAlojamiento("Hotel"));
+        this.liquidar();
     }
 }

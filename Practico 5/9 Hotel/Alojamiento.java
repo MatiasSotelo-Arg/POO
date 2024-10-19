@@ -24,6 +24,9 @@ public abstract class Alojamiento
                        double p_precioBase,
                        int p_diasAlquiler)
     {
+        this.setNombre(p_nombre);
+        this.setPrecioBase(p_precioBase);
+        this.setDiasAlquiler(p_diasAlquiler);
         this.setServicios(new ArrayList<Servicio>());
     }
 
@@ -32,6 +35,9 @@ public abstract class Alojamiento
                        int p_diasAlquiler,
                        ArrayList<Servicio> p_servicios)
     {
+        this.setNombre(p_nombre);
+        this.setPrecioBase(p_precioBase);
+        this.setDiasAlquiler(p_diasAlquiler);
         this.setServicios(p_servicios);
     }
 
@@ -118,7 +124,7 @@ public abstract class Alojamiento
 
         for(Servicio servicios: this.getServicios()) 
         {
-            total = total + servicios.getPrecio();
+            total += servicios.getPrecio();
         }
         
         return total;
@@ -126,9 +132,8 @@ public abstract class Alojamiento
 
     public void liquidar() {
         System.out.println("Alojamiento: " + this.getNombre());
-        System.out.println("Costo por " + this.getDiasAlquiler() + "dias: $" + this.costo() +"alquiler"); 
+        System.out.println("Costo por " + this.getDiasAlquiler() + " dias: $" + (this.costo() - this.costoServicios())+" alquiler"); 
         this.listarServicios();
-
     }
 
     public double costo()
