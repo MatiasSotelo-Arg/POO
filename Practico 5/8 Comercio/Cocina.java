@@ -1,10 +1,14 @@
 
 /**
- * Write a description of class Cocina here.
+ * La clase Cocina representa un electrodomestico con atributos especificos
+ * como hornallas, calorias y dimensiones. 
  * 
- * @author (Sotelo Matias) 
- * @version (07/10/2024)
+ * Hereda de ArtefactoHogar y proporciona metodos para imprimir la informacion del producto y calcular la cuota de credito.
+ * 
+ * @author Sotelo Matias
+ * @version 07/10/2024
  */
+
 public class Cocina extends ArtefactoHogar 
 {
     //Atributos
@@ -12,9 +16,16 @@ public class Cocina extends ArtefactoHogar
     private int calorias;
     private String dimensiones;
 
-    /** Constructor 
-           
-    */
+    /**
+     * Constructor de la clase Cocina.
+     *
+     * @param p_marca La marca de la cocina.
+     * @param p_precio El precio de la cocina.
+     * @param p_stock La cantidad de unidades disponibles en stock.
+     * @param p_hornallas El numero de hornallas de la cocina.
+     * @param p_calorias Las calorias generadas por la cocina.
+     * @param p_dimensiones Las dimensiones de la cocina.
+     */
     public Cocina(String p_marca,
                   float p_precio,
                   int p_stock,
@@ -60,7 +71,13 @@ public class Cocina extends ArtefactoHogar
         this.dimensiones = p_dimensiones;
     }
     
-    //Metodos 
+    //Metodos
+    /**
+     * Imprime en la informacion detallada de la cocina.
+     * Muestra la marca, precio, stock, el numero de hornallas,
+     * las calorias y las dimensiones de la cocina.
+     */ 
+    @Override
     public void imprimir() 
     {
        System.out.println("\n**** Cocina ****");
@@ -70,6 +87,14 @@ public class Cocina extends ArtefactoHogar
        System.out.println("Dimensiones: " + this.getDimensiones());
     }
     
+    /** 
+     * Calcula el monto del credito considerando un pago adicional.
+     * 
+     * @param p_cuotas El numero de cuotas en las que se desea pagar el credito.
+     * @param p_interes La tasa de interes aplicada al credito, en porcentaje.
+     * @return El monto del credito con el pago adicional considerado.
+     */
+    @Override
     public float creditoConAdicional(int p_cuotas, float p_interes)
     {
         return super.cuotaCredito(p_cuotas,p_interes);

@@ -1,6 +1,9 @@
 
 /**
- * Write a description of class Comercio here.
+ * La clase Comercio representa un punto de venta que gestiona electrodomesticos.
+ * 
+ * Esta clase permite calcular las cuotas de credito y mostrar informacion sobre cada
+ * uno, como sus caracteristicas y valores de cuota con o sin adicionales.
  * 
  * @author (Sotelo Matias) 
  * @version (08/10/2024)

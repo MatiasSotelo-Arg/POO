@@ -1,7 +1,10 @@
 
 /**
- * Write a description of class Servicio here.
- * 
+ * La clase Servicio representa un servicio con una descripcion y un precio.
+ *
+ * Permite almacenar informacion sobre el servicio, 
+ * incluyendo su costo y detalles.
+ *
  * @author (Sotelo Matias) 
  * @version (12/10/2024)
  */
@@ -12,7 +15,10 @@ public class Servicio
     private double precio;
 
     /**
-     * Constructor for objects of class Servicio
+     * Constructor de la clase Servicio.
+     *
+     * @param p_descripcion La descripcion del servicio.
+     * @param p_precio El precio del servicio.
      */
     public Servicio(String p_descripcion, double p_precio)
     {

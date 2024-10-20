@@ -1,5 +1,10 @@
 /**
- * Write a description of class Gerencia here.
+ * La clase Gerencia gestiona una lista de alojamientos alquilados, 
+ * permitiendo agregar o quitar alojamientos y calcular el total 
+ * de alojamientos de un tipo especifico. 
+ *
+ * Se encarga de liquidar todos los alojamientos y mostrar la informacion 
+ * de liquidacion de la gerencia.
  * 
  * @author (Sotelo Matias) 
  * @version (12/10/2024)
@@ -14,7 +19,9 @@ public class Gerencia
     private ArrayList<Alojamiento> alojamientosAlquilados; 
 
     /**
-     * Constructor for objects of class Gerencia
+     * Constructor de la clase Gerencia con solo un nombre.
+     *
+     * @param p_nombre El nombre de la gerencia.
      */
     public Gerencia(String p_nombre)
     {   
@@ -22,6 +29,12 @@ public class Gerencia
         this.setAlojamientos(new ArrayList<Alojamiento>()); 
     }
 
+    /**
+     * Constructor de la clase Gerencia con un nombre y una lista de alojamientos.
+     *
+     * @param p_nombre El nombre de la gerencia.
+     * @param p_alojamientos La lista de alojamientos asociados a la gerencia.
+     */
     public Gerencia(String p_nombre, ArrayList<Alojamiento> p_alojamientos)
     {
         this.setNombre(p_nombre);
@@ -51,6 +64,12 @@ public class Gerencia
     }
 
     //Metodos
+    /**
+     * Agrega un alojamiento a la lista de alojamientos de la gerencia.
+     *
+     * @param p_alojamiento El alojamiento a agregar.
+     * @return true si el alojamiento fue agregado con exito; false si el alojamiento ya existe en la lista.
+     */
     public boolean agregarAlojamiento(Alojamiento p_alojamiento) 
     {
         ArrayList<Alojamiento> alojamientos = this.getAlojamientos();
@@ -65,6 +84,12 @@ public class Gerencia
         }
     }
 
+    /**
+     * Quita un alojamiento de la lista de alojamientos de la gerencia.
+     *
+     * @param p_alojamiento El alojamiento a quitar.
+     * @return true si el alojamiento fue eliminado con exito; false si el alojamiento no esta en la lista.
+     */
     public boolean quitarAlojamiento(Alojamiento p_alojamiento) 
     {
         ArrayList<Alojamiento> alojamientos = this.getAlojamientos();
@@ -78,6 +103,12 @@ public class Gerencia
         }
     }
 
+    /**
+     * Cuenta la cantidad de alojamientos de un tipo especifico.
+     *
+     * @param tipoAlojamiento El tipo de alojamiento a contar.
+     * @return El numero total de alojamientos del tipo especificado.
+     */
     public int contarAlojamiento(String tipoAlojamiento)
     {
         int total = 0;
@@ -90,6 +121,10 @@ public class Gerencia
         return total;
     }
 
+    /**
+     * Liquida todos los alojamientos de la lista,
+     * utilizando el metodo liquidar de cada alojamiento.
+     */
     public void liquidar() 
     {   
         for (Alojamiento a : this.getAlojamientos()) {
@@ -97,6 +132,11 @@ public class Gerencia
         }
     }
 
+    /**
+     * Muestra la informacion de liquidacion de la gerencia,
+     * incluyendo el nombre de la gerencia y llamando al metodo
+     * liquidar.
+     */
     public void mostrarLiquidacion() 
     {
         System.out.println("Gerencia " + this.getNombre() );

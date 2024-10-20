@@ -1,5 +1,9 @@
 /**
- * Write a description of class Cabaña here.
+ * La clase Hotel extiende la clase Alojamiento y representa un tipo especifico de alojamiento 
+ * con un tipo de habitacion definido. 
+ * Calcula el costo total de la estancia en funcion del tipo de habitación y la duración del alquiler. 
+ *
+ * Permite liquidar la cuenta y contar la cantidad de hoteles registrados.
  * 
  * @author (Sotelo Matias) 
  * @version (12/10/2024)
@@ -10,7 +14,12 @@ public class Hotel extends Alojamiento
     private String tipoHabitacion;
 
     /**
-     * Constructor for objects of class Cabaña
+     * Constructor de la clase Hotel.
+     *
+     * @param p_nombre El nombre del hotel.
+     * @param p_precioBase El precio base por noche del hotel.
+     * @param p_diasAlquiler La cantidad de dias que se desea alquilar la habitacion.
+     * @param p_tipoHabitacion El tipo de habitacion.
      */
     public Hotel(String p_nombre, 
                   double p_precioBase, 
@@ -34,6 +43,12 @@ public class Hotel extends Alojamiento
     }
 
     //Metodos
+    /**
+     * Calcula el costo total de la estancia en el hotel
+     * segun el tipo de habitacion y la cantidad de dias de alquiler.
+     *
+     * @return El costo total de la estancia.
+     */
     public double costo() {
         double costoBase = super.costo();
 
@@ -56,16 +71,27 @@ public class Hotel extends Alojamiento
         }
     }
 
+    /**
+     * Cuenta la cantidad de alojamientos de tipo "Hotel".
+     *
+     * @param p_alojamiento El tipo de alojamiento a contar.
+     * @return 1 si el alojamiento es un "Hotel" de lo contrario 0.
+     */
     public int contar(String p_alojamiento) {
-        int total = 0;
+
         if(p_alojamiento.equals("Hotel")) 
         {
-            return total + 1;
+            return 1;
         } else {
-            return total;
+            return 0;
         }
     }
 
+    /**
+     * Liquida la cuenta del alojamiento.
+     * Utiliza el metodo de liquidacion de la clase padre,
+     * muestra el tipo de habitacion y el costo total.
+     */
     public void liquidar() {
         super.liquidar();
         System.out.println("Habitacion " + this.getTipoHabitacion());

@@ -1,9 +1,12 @@
-
 /**
- * Write a description of class Lavarropas here.
+ * La clase Lavarropas representa un electrodomestico, Hereda de ArtefactoHogar e incluye atributos.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Proporciona metodos para imprimir la informacion detallada del lavarropas,
+ * calcular el credito con descuentos adicionales segun sus caracteristicas y gestionar
+ * los datos relacionados con el lavarropas.
+ * 
+ * @author (Sotelo Matias) 
+ * @version (07/10/2024)
  */
 public class Lavarropas extends ArtefactoHogar
 {
@@ -13,7 +16,14 @@ public class Lavarropas extends ArtefactoHogar
     private boolean automatico;
     
     /**
-     * Constructor for objects of class Lavarropas
+     * Constructor de la clase Lavarropas.
+     *
+     * @param p_marca La marca del lavarropas.
+     * @param p_precio El precio del lavarropas.
+     * @param p_stock La cantidad de unidades disponibles en stock.
+     * @param p_programa El número de programas de lavado que ofrece el lavarropas.
+     * @param p_kilos La capacidad de carga del lavarropas en kilogramos.
+     * @param p_automatico Indica si el lavarropas es automático (true) o manual (false).
      */
     public Lavarropas(String p_marca,
                     float p_precio,
@@ -61,6 +71,11 @@ public class Lavarropas extends ArtefactoHogar
     }
     
     //Metodos
+    /**
+     * Imprime la informacion detallada del lavarropas.
+     * Muestra la marca, precio, stock, la cantidad de programas de lavado,
+     * la capacidad de carga en kilos y si es automatico.
+     */
      public void imprimir() 
     {
        String esAutomatico = (this.getAutomatico() ? "SI" : "NO");
@@ -71,6 +86,13 @@ public class Lavarropas extends ArtefactoHogar
        System.out.println("Compresor: " + esAutomatico);
     }
     
+    /** 
+     * Calcula el monto del credito considerando un pago adicional.
+     * 
+     * @param p_cuotas El numero de cuotas en las que se desea pagar el credito.
+     * @param p_interes La tasa de interes aplicada al credito, en porcentaje.
+     * @return El monto del credito con el pago adicional considerado.
+     */
     public float creditoConAdicional(int p_cuotas, float p_interes)
     {
         float cuota = super.cuotaCredito(p_cuotas,p_interes);
